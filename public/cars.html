@@ -10,7 +10,48 @@
 <script src="./carinfo.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js" integrity="sha256-hSzapznWRy/aOZkctlN03an9DxCLlN8ZCQS0lxntiHg=" crossorigin="anonymous"></script>
+    <script type="template-x" class="list">
+        <ul>
+            {{#each data}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </script>
+	<script type="template-x" class="allCars">
+       <!--{{#each data}}
+		<h4>Make: {{this.make}}</h4>
+		<ul>
+		<li>Model- {{this.model}}</li>
+		<li>Color- {{this.color}}</li>
+		<li>Price- {{this.price}}</li>
+		<li>Reg_number- {{this.reg_number}}</li>
+		
+		</ul>
+		
+				{{/each}}
+		--> 
+			
+		<table>
+			<tr>
+				<th>Make</th>
+				<th>Model</th>
+				<th>Color</th>
+				<th>Price</th>
+				<th>Reg_Number</th>
+			</tr>
+		{{#each data}}
 
+			<tr>
+				<td>{{this.make}}</td>
+				<td>{{this.model}}</td>
+				<td>{{this.color}}</td>
+				<td>{{this.price}}</td>
+				<td>{{this.reg_number}}</td>
+			</tr>
+		{{/each}}
+	</table>
+
+    </script>
 </head>
 <body>
 
@@ -30,8 +71,7 @@
 	<div class="cars">
 
 	</div>
-	<div class="">
-
-	</div>
+	
 </body>
+
 </html>
