@@ -17,6 +17,7 @@ axios.get('https://api-tutor.herokuapp.com/v1/colors')
     colorsElem.innerHTML=listTemplate({
       data : res.data
     })
+    console.log(res)
     console.log(res.data)
 
 
@@ -35,11 +36,15 @@ axios.get('https://api-tutor.herokuapp.com/v1/makes')
 //Get all cars
 axios.get('https://api-tutor.herokuapp.com/v1/cars')
 .then((res)=>{
-  var allCars = res.data
+ // var allCars = res.data
+
+
+ // carsElem.innerHTML= JSON.stringify(allCars)
+
  //var  carsResult = JSON.stringify(res.data)
- console.log(allCars)
+ //console.log(allCars)
 carsElem.innerHTML= showAllCars({
-  data: res.data
+ data: res.data
 })
 /*
 allCars.forEach(car => {
