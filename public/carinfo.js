@@ -10,7 +10,6 @@ const listTemplate = Handlebars.compile(colorsTemplateElem)
 
 const showAllCarsTemp = document.querySelector('.allCars').innerHTML
 const showAllCars = Handlebars.compile(showAllCarsTemp)
-//Get all colors
 console.log(listTemplate)
 
 axios.get('https://api-tutor.herokuapp.com/v1/colors')
